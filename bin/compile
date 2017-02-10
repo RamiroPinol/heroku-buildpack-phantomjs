@@ -15,6 +15,7 @@ BUILDPACK_PHANTOMJS_PACKAGE=https://bitbucket.org/ariya/phantomjs/downloads/${FI
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
+  echo "-----> Beggining download..."
   echo "-----> Fetching PhantomJS ${VERSION} binaries at ${BUILDPACK_PHANTOMJS_PACKAGE}"
   curl  $BUILDPACK_PHANTOMJS_PACKAGE -L -O $CACHE_DIR/$FILE_NAME
   echo "-----> Binaries downloaded"
