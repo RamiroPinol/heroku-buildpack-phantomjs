@@ -6,12 +6,12 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 # config
-VERSION="2.1.1"
+VERSION="2.5.0-beta"
 
 # Buildpack URL
-ARCHIVE_NAME=phantomjs-${VERSION}-linux-x86_64
-FILE_NAME=${ARCHIVE_NAME}.tar.bz2
-BUILDPACK_PHANTOMJS_PACKAGE=https://github.com/Medium/phantomjs/releases/download/v${VERSION}/${FILE_NAME}
+ARCHIVE_NAME=phantomjs-${VERSION}-linux-ubuntu-xenial-x86_64
+FILE_NAME=${ARCHIVE_NAME}.tar.gz
+BUILDPACK_PHANTOMJS_PACKAGE=https://bitbucket.org/ariya/phantomjs/downloads/${FILE_NAME}
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
